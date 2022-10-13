@@ -1,108 +1,83 @@
 <?xml version="1.0" encoding="utf-8"?>
-<search> 
-  
-  
-    
-    <entry>
-      <title>leetcode</title>
-      <link href="/2022/10/14/leetcode/"/>
-      <url>/2022/10/14/leetcode/</url>
-      
-        <content type="html"><![CDATA[<h4 id="769-最多能完成排序的块"><a href="#769-最多能完成排序的块" class="headerlink" title="769. 最多能完成排序的块"></a><a href="https://leetcode.cn/problems/max-chunks-to-make-sorted/">769. 最多能完成排序的块</a></h4><p>难度中等357收藏分享切换为英文接收动态反馈</p><p>给定一个长度为 <code>n</code> 的整数数组 <code>arr</code> ，它表示在 <code>[0, n - 1]</code> 范围内的整数的排列。</p><p>我们将 <code>arr</code> 分割成若干 <strong>块</strong> (即分区)，并对每个块单独排序。将它们连接起来后，使得连接的结果和按升序排序后的原数组相同。</p><p>返回数组能分成的最多块数量。</p><p><strong>示例 1:</strong></p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">输入: arr = [4,3,2,1,0]</span><br><span class="line">输出: 1</span><br><span class="line">解释:</span><br><span class="line">将数组分成2块或者更多块，都无法得到所需的结果。</span><br><span class="line">例如，分成 [4, 3], [2, 1, 0] 的结果是 [3, 4, 0, 1, 2]，这不是有序的数组。</span><br></pre></td></tr></table></figure><p><strong>示例 2:</strong></p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">输入: arr = [1,0,2,3,4]</span><br><span class="line">输出: 4</span><br><span class="line">解释:</span><br><span class="line">我们可以把它分成两块，例如 [1, 0], [2, 3, 4]。</span><br><span class="line">然而，分成 [1, 0], [2], [3], [4] 可以得到最多的块数。</span><br></pre></td></tr></table></figure><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span> &#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="type">int</span> <span class="title function_">maxChunksToSorted</span><span class="params">(<span class="type">int</span>[] arr)</span> &#123;</span><br><span class="line">        <span class="comment">//当遍历到第i个位置时，如果可以切分为块，那前i个位置的最大值一定等于i。</span></span><br><span class="line">        <span class="comment">//否则，一定有比i小的数划分到后面的块，那块排序后，一定不满足升序。</span></span><br><span class="line">        <span class="type">int</span> <span class="variable">res</span> <span class="operator">=</span> <span class="number">0</span>, max = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> <span class="variable">i</span> <span class="operator">=</span> <span class="number">0</span>; i &lt; arr.length; i++)&#123;</span><br><span class="line">            max = Math.max(max, arr[i]);<span class="comment">//统计前i个位置的最大元素</span></span><br><span class="line">            <span class="keyword">if</span> (max == i) res++;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> res;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
-      
-      
+<search>
+  <entry>
+    <title>Hello World</title>
+    <url>/2022/10/12/hello-world/</url>
+    <content><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
+<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p>
+<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p>
+<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p>
+<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+]]></content>
+  </entry>
+  <entry>
+    <title>oveshPost</title>
+    <url>/2022/10/12/oveshPost/</url>
+    <content><![CDATA[]]></content>
+  </entry>
+  <entry>
+    <title>comment</title>
+    <url>/2022/10/13/comment/</url>
+    <content><![CDATA[<p>希望你永远热爱你的生活</p>
+]]></content>
       <categories>
-          
-          <category> 力扣刷题记录 </category>
-          
+        <category>记录生活</category>
       </categories>
-      
-      
-        <tags>
-            
-            <tag> 力扣算法 </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>about</title>
-      <link href="/2022/10/13/about/"/>
-      <url>/2022/10/13/about/</url>
-      
-        <content type="html"><![CDATA[<ul><li><h4 id="重庆科班在读，创此博客记录学习和生活的点滴"><a href="#重庆科班在读，创此博客记录学习和生活的点滴" class="headerlink" title="重庆科班在读，创此博客记录学习和生活的点滴~"></a>重庆科班在读，创此博客记录学习和生活的点滴~</h4></li></ul>]]></content>
-      
-      
+      <tags>
+        <tag>comment</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>about</title>
+    <url>/2022/10/13/about/</url>
+    <content><![CDATA[<ul>
+<li><h4 id="重庆科班在读，创此博客记录学习和生活的点滴"><a href="#重庆科班在读，创此博客记录学习和生活的点滴" class="headerlink" title="重庆科班在读，创此博客记录学习和生活的点滴~"></a>重庆科班在读，创此博客记录学习和生活的点滴~</h4></li>
+</ul>
+]]></content>
       <categories>
-          
-          <category> 关于我 </category>
-          
+        <category>关于我</category>
       </categories>
-      
-      
-        <tags>
-            
-            <tag> about </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>comment</title>
-      <link href="/2022/10/13/comment/"/>
-      <url>/2022/10/13/comment/</url>
-      
-        <content type="html"><![CDATA[<p>希望你永远热爱你的生活</p>]]></content>
-      
-      
+      <tags>
+        <tag>about</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>leetcode</title>
+    <url>/2022/10/14/leetcode/</url>
+    <content><![CDATA[<h4 id="769-最多能完成排序的块"><a href="#769-最多能完成排序的块" class="headerlink" title="769. 最多能完成排序的块"></a><a href="https://leetcode.cn/problems/max-chunks-to-make-sorted/">769. 最多能完成排序的块</a></h4><p>难度中等357收藏分享切换为英文接收动态反馈</p>
+<p>给定一个长度为 <code>n</code> 的整数数组 <code>arr</code> ，它表示在 <code>[0, n - 1]</code> 范围内的整数的排列。</p>
+<p>我们将 <code>arr</code> 分割成若干 <strong>块</strong> (即分区)，并对每个块单独排序。将它们连接起来后，使得连接的结果和按升序排序后的原数组相同。</p>
+<p>返回数组能分成的最多块数量。</p>
+<p><strong>示例 1:</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">输入: arr = [4,3,2,1,0]</span><br><span class="line">输出: 1</span><br><span class="line">解释:</span><br><span class="line">将数组分成2块或者更多块，都无法得到所需的结果。</span><br><span class="line">例如，分成 [4, 3], [2, 1, 0] 的结果是 [3, 4, 0, 1, 2]，这不是有序的数组。</span><br></pre></td></tr></table></figure>
+
+<p><strong>示例 2:</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">输入: arr = [1,0,2,3,4]</span><br><span class="line">输出: 4</span><br><span class="line">解释:</span><br><span class="line">我们可以把它分成两块，例如 [1, 0], [2, 3, 4]。</span><br><span class="line">然而，分成 [1, 0], [2], [3], [4] 可以得到最多的块数。</span><br></pre></td></tr></table></figure>
+
+
+
+
+
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span> &#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="type">int</span> <span class="title function_">maxChunksToSorted</span><span class="params">(<span class="type">int</span>[] arr)</span> &#123;</span><br><span class="line">        <span class="comment">//当遍历到第i个位置时，如果可以切分为块，那前i个位置的最大值一定等于i。</span></span><br><span class="line">        <span class="comment">//否则，一定有比i小的数划分到后面的块，那块排序后，一定不满足升序。</span></span><br><span class="line">        <span class="type">int</span> <span class="variable">res</span> <span class="operator">=</span> <span class="number">0</span>, max = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> <span class="variable">i</span> <span class="operator">=</span> <span class="number">0</span>; i &lt; arr.length; i++)&#123;</span><br><span class="line">            max = Math.max(max, arr[i]);<span class="comment">//统计前i个位置的最大元素</span></span><br><span class="line">            <span class="keyword">if</span> (max == i) res++;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> res;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+
+
+]]></content>
       <categories>
-          
-          <category> 记录生活 </category>
-          
+        <category>力扣刷题记录</category>
       </categories>
-      
-      
-        <tags>
-            
-            <tag> comment </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>oveshPost</title>
-      <link href="/2022/10/12/oveshPost/"/>
-      <url>/2022/10/12/oveshPost/</url>
-      
-        <content type="html"><![CDATA[]]></content>
-      
-      
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>Hello World</title>
-      <link href="/2022/10/12/hello-world/"/>
-      <url>/2022/10/12/hello-world/</url>
-      
-        <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p><h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p><h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p><h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p><h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>]]></content>
-      
-      
-      
-    </entry>
-    
-    
-  
-  
+      <tags>
+        <tag>力扣算法</tag>
+      </tags>
+  </entry>
 </search>
