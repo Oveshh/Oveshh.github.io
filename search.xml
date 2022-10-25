@@ -3333,4 +3333,82 @@
         <tag>mybatis</tag>
       </tags>
   </entry>
+  <entry>
+    <title>git</title>
+    <url>/2022/10/25/git/</url>
+    <content><![CDATA[<h1 id="GIt-的常用命令"><a href="#GIt-的常用命令" class="headerlink" title="GIt 的常用命令"></a>GIt 的常用命令</h1><ul>
+<li>查看配置信息：</li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><code class="hljs git">git config --global user.name<br>git config --global user.email<br></code></pre></td></tr></table></figure>
+
+
+
+<ul>
+<li><p>获取本地仓库:  git init </p>
+</li>
+<li><p>查看修改状态  git status  </p>
+</li>
+<li><p>添加工作区到暂存区 （add）   git add   单个文件名|通配符  . </p>
+</li>
+<li><p>提交暂存区到本地仓库    git commit  -m ‘注释内容’ </p>
+</li>
+<li><p>查看提交日志   git  log  [option] </p>
+<ul>
+<li>options:<ul>
+<li>– all 显示所有分支</li>
+<li>–pretty&#x3D;online 将提交信息显示为一行。</li>
+<li>–abbrev–commit  使得输出的commitid更简短</li>
+<li>–graph 以图的形式显示</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>版本回退   git reset  –hard commitID       </p>
+</li>
+<li><p>commitID 可以通过 git  log  或者 git-log   查看</p>
+</li>
+<li><p>git reflog  可以 查看已删除的提交记录</p>
+</li>
+<li><p>查看本地分支：  gti  branch  </p>
+</li>
+<li><p>创建本地分支 ：  git  branch  分支名 </p>
+</li>
+<li><p>切换分支：  git checkout   分支名 </p>
+<ul>
+<li>还可以切换到不存在的（创建并切换：  git checkout -b  分支名)</li>
+</ul>
+</li>
+<li><p>分支合并：  git merge  分支名称</p>
+</li>
+<li><p>删除分支： 不能删除当前分支。 只能删除其他分支。</p>
+</li>
+<li><p>git  branch -d b1  删除分支时需要各种检查。</p>
+</li>
+<li><p>git  branch -D  b1  不做任何检查，强制删除。 </p>
+</li>
+<li><p>删除整个文件夹。</p>
+</li>
+<li><p>#删除文件(如“动画demo.md‘)或者文件夹<br><code>git rm --cached 文件名/git rm -r --cached 文件夹名</code></p>
+</li>
+</ul>
+<p>在开发中，一般有如下分支使用原则与流程：</p>
+<p> master （生产） 分支 线上分支，主分支，中小规模项目作为线上运行的应用对应的分支；</p>
+<p> develop（开发）分支 是从master创建的分支，一般作为开发部门的主要开发分支，如果没有其他并行开发不同期上线 要求，都可以在此版本进行开发，阶段开发完成后，需要是合并到master分支,准备上线。</p>
+<p> feature&#x2F;xxxx分支 从develop创建的分支，一般是同期并行开发，但不同期上线时创建的分支，分支上的研发任务完 成后合并到develop分支。</p>
+<p> hotfix&#x2F;xxxx分支， 从master派生的分支，一般作为线上bug修复使用，修复完成后需要合并到master、test、 develop分支。</p>
+<p> 还有一些其他分支，在此不再详述，例如test分支（用于代码测试）、pre分支（预上线分支）等 等。</p>
+<ul>
+<li><p>查看远程仓库 ：   git remote  </p>
+</li>
+<li><p>克隆远程仓库代码： git clone &lt;远程仓库地址&gt;</p>
+</li>
+</ul>
+]]></content>
+      <categories>
+        <category>Git学习</category>
+      </categories>
+      <tags>
+        <tag>Git</tag>
+      </tags>
+  </entry>
 </search>
